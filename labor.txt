@@ -1,0 +1,22 @@
+#!/bin/bash
+#thi is to locate the file and make a copy of whole directory in that file
+
+location=$1
+filename=$2
+
+if [ -z "$location" ]
+then
+echo "print the arguement for $location"
+exit 0
+fi
+
+if [ -z "$filename" ]
+then echo "print the arguement for $filename"
+exit 0
+fi 
+ls $location > $filename
+echo "script success and index the $location"
+echo "######"
+echo "display the content of $filename"
+echo "########"
+cat $filename
